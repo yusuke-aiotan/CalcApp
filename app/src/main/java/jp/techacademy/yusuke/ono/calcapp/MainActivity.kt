@@ -40,8 +40,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(intent)
             } else if (v?.id == R.id.calculation4) {
                 try {
-                    val div =
-                        BigDecimal(button1).divide(BigDecimal(button2), 8, RoundingMode.HALF_UP)
+                    val div = BigDecimal(button1).divide(BigDecimal(button2), 8, RoundingMode.HALF_UP)
                     intent.putExtra("VALUE", div.toString())
                     startActivity(intent)
                 } catch (e: Exception) {
